@@ -9,7 +9,6 @@ module.exports.getDate = function(){
   // We have to pass the attributes as an option : in this format toLocaleDateString function will return the result
   // It will detect the today's weekday month and dayofthismonth
   return today.toLocaleDateString("en-US", options);
-
 }
 
 module.exports.getDay = function (){

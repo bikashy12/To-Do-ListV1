@@ -5,12 +5,13 @@ const date = require(__dirname + "/date.js");
 const app = express();
 let items = ["Homework", "Assignment"];
 let workItems = [];
+
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended:false})); // initialising body-parser for use
 app.use(express.static("public"));
 
 app.get("/", function(req, res){
-  let day = date.getDate(); 
+  let day = date.getDate();
   res.render("list", {listTitle:day, item: items});
 })
 
